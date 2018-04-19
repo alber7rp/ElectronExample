@@ -44,9 +44,9 @@ app.on('ready', function() {
   // Vinculamos el index.html a dicha ventana
 
   mainWindow.loadURL('file://' + __dirname + '/index.html');
-  
-  //mainWindow.openDevTools();
 
+  //mainWindow.openDevTools();
+mainWindow.openDevTools();
 
 
 
@@ -61,4 +61,3 @@ app.on('ready', function() {
   });
 
 });
-
