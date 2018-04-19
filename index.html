@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Ejemplo Electron JS</title>
+  </head>
+  <body>
+    <h1>Haz click para saber la ip pública</h1>
+    <button onclick="obtenerippublica()"> dale! </button>
+    <p id="resultado"> </p>
+  </body>
+</html>
+
+<script>
+	// importamos `fs` y `path`
+  function obtenerippublica(){
+    var getIP = require('external-ip')();
+
+        getIP((err, ip) => {
+          if (err) {
+              // every service in the list has failed
+              throw err;
+          }
+          console.log(ip);
+          document.getElementById('resultado').innerHTML = "IP pública: " + ip;
+        });
+    }
+</script>
+
